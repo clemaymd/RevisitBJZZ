@@ -1,4 +1,4 @@
-#### 2024-02-19 
+#### 2025-07-07 
 
 ## Overview
 
@@ -12,7 +12,7 @@ By using the code, you agree to the following rules:
 
 All datasets are proprietary. We do not have the rights to share any of the data. We provide pseudo data to illustrate the code usage. 
 
-The computer code is written in SAS and allows for replicating all tables presented in the paper. It also includes our implementation of the Quote MidPoint (QMP) approach, as advocated by Barber et al. (2023).
+The computer code is written in SAS and allows for replicating all tables presented in the paper. It also includes our implementation of the Quote MidPoint (QMP) approach, as advocated by Barber et al. (2024).
 
 ## Main Folder
 
@@ -77,8 +77,8 @@ An output file named `rtq_qmp.sas7bdat` is saved after each run, and any previou
 
 ## References
 
-Ardia D., Aymard C., and Cenesizoglu T. 2024. Revisiting Boehmer et al. (2021): Recent Period, Alternative method, Different Conclusions. Working paper. https://ssrn.com/abstract=4703056
+Ardia D., Aymard C., and Cenesizoglu T. 2025. Revisiting Boehmer et al. (2025): Recent Period, Alternative method, Different Conclusions. Forthcoming in Financial Markets and Portfolio Management. https://ssrn.com/abstract=4703056
 
-Barber B. M., Huang X., Jorion P., Odean T., and Schwarz C. 2023. A (Sub)penny For Your Thoughts: Tracking Retail Investor Activity in TAQ. Forthcoming in the Journal of Finance. https://doi.org/10.2139/ssrn.4202874
+Barber B. M., Huang X., Jorion P., Odean T., and Schwarz C. 2024. A (Sub)penny For Your Thoughts: Tracking Retail Investor Activity in TAQ. Journal of Finance 79:2403. https://doi.org/10.2139/ssrn.4202874
 
 Boehmer E., Jones C.M., Zhang X., and Zhang X. 2021. Tracking retail investor activity. Journal of Finance 76:2249. https://doi.org/10.1111/jofi.13033 
