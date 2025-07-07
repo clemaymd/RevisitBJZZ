@@ -1,0 +1,19 @@
+_OIB_ _RET_ _SUBGRP_ CLASSVAR_GRP Estimate tValue IQR order
+oibvol "Bid ask" MKTCAP small 0.002991 3.14 1.4204323402 1.1
+oibvol "Bid ask" MKTCAP medium 0.003517 3.86 1.0713797256 1.2
+oibvol "Bid ask" MKTCAP big 0.000184 0.15 0.8319320678 1.3
+oibtrd "Bid ask" MKTCAP small 0.003005 3.24 1.4503556611 1.1
+oibtrd "Bid ask" MKTCAP medium 0.003716 3.78 1.1451924702 1.2
+oibtrd "Bid ask" MKTCAP big -0.00004 -0.04 0.9293138286 1.3
+oibvol "Bid ask" "Share price" small 0.003082 2.62 1.267652573 1.1
+oibvol "Bid ask" "Share price" medium 0.001865 2.16 1.0921098579 1.2
+oibvol "Bid ask" "Share price" big 0.001258 1.27 0.8761545738 1.3
+oibtrd "Bid ask" "Share price" small 0.002842 2.71 1.3547512031 1.1
+oibtrd "Bid ask" "Share price" medium 0.00217 2.41 1.1657638153 1.2
+oibtrd "Bid ask" "Share price" big 0.000751 0.77 0.954865217 1.3
+oibvol "Bid ask" Turnover small 0.002781 4.08 1.3933513139 1.1
+oibvol "Bid ask" Turnover medium 0.001695 1.67 1.1181903774 1.2
+oibvol "Bid ask" Turnover big 0.000295 0.23 0.7987071707 1.3
+oibtrd "Bid ask" Turnover small 0.002791 4.12 1.3924442806 1.1
+oibtrd "Bid ask" Turnover medium 0.001224 1.21 1.157236931 1.2
+oibtrd "Bid ask" Turnover big 0.00196 1.69 0.9345262075 1.3
