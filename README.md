@@ -2,7 +2,7 @@
 
 ## Overview
 
-This README file provides information about the data and the computer code used to generate the results presented in Ardia et al. (2024), **Revisiting Boehmer et al. (2021): Recent Period, Alternative method, Different Conclusions.**
+This README file provides information about the data and the computer code used to generate the results presented in Ardia et al. (2025), **Revisiting Boehmer et al. (2021): Recent Period, Alternative method, Different Conclusions.**, Conditionnally accepted for publication in Financial Markets and Portfolio Management.
 
 By using the code, you agree to the following rules:
 
