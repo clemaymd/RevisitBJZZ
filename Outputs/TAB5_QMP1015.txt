@@ -1,25 +1,25 @@
 _OIB_ _RET_ _K_ Estimate tValue order
-oibvol "Bid ask" 2 0.00172 3.26 2
-oibvol "Bid ask" 4 0.000347 0.70 2
-oibvol "Bid ask" 6 0.000533 0.90 2
-oibvol "Bid ask" 8 -0.00051 -0.96 2
-oibvol "Bid ask" 10 -0.00055 -1.02 2
-oibvol "Bid ask" 12 0.001342 1.85 2
-oibtrd "Bid ask" 2 0.001429 2.45 2
-oibtrd "Bid ask" 4 0.000511 1.01 2
-oibtrd "Bid ask" 6 0.000894 1.48 2
-oibtrd "Bid ask" 8 -0.00065 -1.17 2
-oibtrd "Bid ask" 10 -0.00044 -0.79 2
-oibtrd "Bid ask" 12 0.000964 1.74 2
-oibvol CRSP 2 0.001899 3.53 2
-oibvol CRSP 4 0.000313 0.63 2
-oibvol CRSP 6 0.000574 0.97 2
-oibvol CRSP 8 -0.00049 -0.90 2
-oibvol CRSP 10 -0.00058 -1.09 2
-oibvol CRSP 12 0.001263 1.78 2
-oibtrd CRSP 2 0.00161 2.70 2
-oibtrd CRSP 4 0.00048 0.98 2
-oibtrd CRSP 6 0.000937 1.52 2
-oibtrd CRSP 8 -0.0007 -1.24 2
-oibtrd CRSP 10 -0.00046 -0.81 2
-oibtrd CRSP 12 0.000884 1.64 2
+oibvol "Bid ask" 2 0.000416 1.73 2
+oibvol "Bid ask" 4 0.000296 1.42 2
+oibvol "Bid ask" 6 0.000238 0.95 2
+oibvol "Bid ask" 8 0.000489 1.90 2
+oibvol "Bid ask" 10 0.000268 1.09 2
+oibvol "Bid ask" 12 0.000441 1.99 2
+oibtrd "Bid ask" 2 0.000274 1.16 2
+oibtrd "Bid ask" 4 0.000271 1.29 2
+oibtrd "Bid ask" 6 0.000295 1.21 2
+oibtrd "Bid ask" 8 0.000418 1.69 2
+oibtrd "Bid ask" 10 0.000326 1.31 2
+oibtrd "Bid ask" 12 0.000337 1.39 2
+oibvol CRSP 2 0.000408 1.71 2
+oibvol CRSP 4 0.000307 1.49 2
+oibvol CRSP 6 0.00021 0.85 2
+oibvol CRSP 8 0.00047 1.84 2
+oibvol CRSP 10 0.000254 1.02 2
+oibvol CRSP 12 0.000395 1.77 2
+oibtrd CRSP 2 0.000262 1.11 2
+oibtrd CRSP 4 0.000268 1.30 2
+oibtrd CRSP 6 0.000256 1.06 2
+oibtrd CRSP 8 0.000395 1.60 2
+oibtrd CRSP 10 0.000325 1.28 2
+oibtrd CRSP 12 0.000281 1.16 2
