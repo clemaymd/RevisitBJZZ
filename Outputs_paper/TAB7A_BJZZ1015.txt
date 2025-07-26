@@ -1,25 +1,25 @@
 _OIB_ _RET_ _NAME_ Estimate tValue order
-oibvol "Bid ask" Intercept -0.13505 -23.28 1
-oibvol "Bid ask" loibvol 0.201446 78.12 2.1
-oibvol "Bid ask" lnewret -0.82354 -36.14 3.1
-oibvol "Bid ask" lmret -0.12284 -9.91 4
-oibvol "Bid ask" l6mret -0.00523 -1.12 5
-oibvol "Bid ask" _ADJRSQ_ 0.046903 51.97 10
-oibvol CRSP Intercept -0.13495 -23.27 1
-oibvol CRSP loibvol 0.201479 78.13 2.1
-oibvol CRSP lret -0.82502 -36.49 3.2
-oibvol CRSP lmret -0.12278 -9.90 4
-oibvol CRSP l6mret -0.00528 -1.13 5
-oibvol CRSP _ADJRSQ_ 0.046932 52.05 10
-oibtrd "Bid ask" Intercept -0.11269 -12.63 1
-oibtrd "Bid ask" loibtrd 0.274311 97.13 2.2
-oibtrd "Bid ask" lnewret -0.7798 -31.83 3.1
-oibtrd "Bid ask" lmret -0.08569 -6.75 4
-oibtrd "Bid ask" l6mret 0.014304 2.62 5
-oibtrd "Bid ask" _ADJRSQ_ 0.082031 76.88 10
-oibtrd CRSP Intercept -0.11257 -12.62 1
-oibtrd CRSP loibtrd 0.274356 97.13 2.2
-oibtrd CRSP lret -0.78326 -32.29 3.2
-oibtrd CRSP lmret -0.08561 -6.74 4
-oibtrd CRSP l6mret 0.014253 2.61 5
-oibtrd CRSP _ADJRSQ_ 0.082066 76.84 10
+oibvol "Bid ask" Intercept -0.13487 -23.27 1
+oibvol "Bid ask" loibvol 0.201439 78.12 2.1
+oibvol "Bid ask" lnewret -0.82555 -36.31 3.1
+oibvol "Bid ask" lmret -0.12312 -9.92 4
+oibvol "Bid ask" l6mret -0.00566 -1.21 5
+oibvol "Bid ask" _ADJRSQ_ 0.046914 52.00 10
+oibvol CRSP Intercept -0.13477 -23.26 1
+oibvol CRSP loibvol 0.201472 78.12 2.1
+oibvol CRSP lret -0.82705 -36.64 3.2
+oibvol CRSP lmret -0.12306 -9.91 4
+oibvol CRSP l6mret -0.00571 -1.22 5
+oibvol CRSP _ADJRSQ_ 0.046944 52.08 10
+oibtrd "Bid ask" Intercept -0.11259 -12.62 1
+oibtrd "Bid ask" loibtrd 0.274085 97.02 2.2
+oibtrd "Bid ask" lnewret -0.78174 -31.94 3.1
+oibtrd "Bid ask" lmret -0.0864 -6.80 4
+oibtrd "Bid ask" l6mret 0.013948 2.55 5
+oibtrd "Bid ask" _ADJRSQ_ 0.081914 76.67 10
+oibtrd CRSP Intercept -0.11247 -12.61 1
+oibtrd CRSP loibtrd 0.27413 97.02 2.2
+oibtrd CRSP lret -0.78531 -32.39 3.2
+oibtrd CRSP lmret -0.08632 -6.79 4
+oibtrd CRSP l6mret 0.013901 2.54 5
+oibtrd CRSP _ADJRSQ_ 0.08195 76.63 10

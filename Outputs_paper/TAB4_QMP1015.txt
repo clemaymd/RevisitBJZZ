@@ -1,19 +1,19 @@
-_OIB_ _RET_ _SUBGRP_ CLASSVAR_GRP Estimate tValue IQR order
-oibvol "Bid ask" MKTCAP small 0.001374 14.47 1.6208617299 1.1
-oibvol "Bid ask" MKTCAP medium 0.000528 5.73 1.2352743373 1.2
-oibvol "Bid ask" MKTCAP big 0.000415 4.43 0.8804091344 1.3
-oibtrd "Bid ask" MKTCAP small 0.001175 11.74 1.6507290576 1.1
-oibtrd "Bid ask" MKTCAP medium 0.000389 4.06 1.203824279 1.2
-oibtrd "Bid ask" MKTCAP big 0.000345 3.54 0.8741343198 1.3
-oibvol "Bid ask" "Share price" small 0.00155 13.39 1.410602437 1.1
-oibvol "Bid ask" "Share price" medium 0.000632 7.89 1.2606030997 1.2
-oibvol "Bid ask" "Share price" big 0.000331 4.38 0.9703118462 1.3
-oibtrd "Bid ask" "Share price" small 0.001274 10.66 1.5043741509 1.1
-oibtrd "Bid ask" "Share price" medium 0.000458 5.61 1.2160348615 1.2
-oibtrd "Bid ask" "Share price" big 0.000309 3.68 0.9311900518 1.3
-oibvol "Bid ask" Turnover small 0.001101 15.46 1.7490522451 1.1
-oibvol "Bid ask" Turnover medium 0.000877 9.18 1.1550177269 1.2
-oibvol "Bid ask" Turnover big 0.000866 4.84 0.8661156496 1.3
-oibtrd "Bid ask" Turnover small 0.001014 13.55 1.6621406418 1.1
-oibtrd "Bid ask" Turnover medium 0.000657 6.28 1.1194292384 1.2
-oibtrd "Bid ask" Turnover big 0.000576 3.09 0.9306202622 1.3
+_OIB_ _RET_ _SUBGRP_ CLASSVAR_GRP Estimate tValue NOBS IQR order
+oibvol "Bid ask" MKTCAP small 0.001369 14.56 1123985 1.6221562652 1.1
+oibvol "Bid ask" MKTCAP medium 0.000553 5.98 1125403 1.235273226 1.2
+oibvol "Bid ask" MKTCAP big 0.000428 4.54 1125323 0.8801554369 1.3
+oibtrd "Bid ask" MKTCAP small 0.001175 11.76 1123985 1.6509341689 1.1
+oibtrd "Bid ask" MKTCAP medium 0.000409 4.16 1125403 1.2032707 1.2
+oibtrd "Bid ask" MKTCAP big 0.000353 3.63 1125323 0.8739376976 1.3
+oibvol "Bid ask" "Share price" small 0.001552 13.40 1123563 1.4120047288 1.1
+oibvol "Bid ask" "Share price" medium 0.000631 7.88 1125594 1.2601013399 1.2
+oibvol "Bid ask" "Share price" big 0.000336 4.43 1125554 0.970174545 1.3
+oibtrd "Bid ask" "Share price" small 0.001277 10.68 1123563 1.5045839376 1.1
+oibtrd "Bid ask" "Share price" medium 0.000457 5.59 1125594 1.2153496473 1.2
+oibtrd "Bid ask" "Share price" big 0.000315 3.75 1125554 0.9310511218 1.3
+oibvol "Bid ask" Turnover small 0.001104 15.47 1123985 1.7492031529 1.1
+oibvol "Bid ask" Turnover medium 0.000868 9.08 1125403 1.1549157578 1.2
+oibvol "Bid ask" Turnover big 0.000873 4.88 1125323 0.8662383953 1.3
+oibtrd "Bid ask" Turnover small 0.001016 13.48 1123985 1.6618192367 1.1
+oibtrd "Bid ask" Turnover medium 0.00065 6.24 1125403 1.1190525858 1.2
+oibtrd "Bid ask" Turnover big 0.000585 3.14 1125323 0.9306130284 1.3
