@@ -26,6 +26,6 @@ An output file named `rtq_qmp.sas7bdat` is saved after each run, and any previou
 
 ## References
 
-Ardia D., Aymard C., and Cenesizoglu T. 2024. Revisiting Boehmer et al. (2021): Recent Period, Alternative method, Different Conclusions. Working paper. https://ssrn.com/abstract=4703056
+Ardia D., Aymard C., and Cenesizoglu T. 2025. Revisiting Boehmer et al. (2025): Recent Period, Alternative method, Different Conclusions. Forthcoming in Financial Markets and Portfolio Management. https://ssrn.com/abstract=4703056
 
 Barber B. M., Huang X., Jorion P., Odean T., and Schwarz C. 2023. A (Sub)penny For Your Thoughts: Tracking Retail Investor Activity in TAQ. Forthcoming in the Journal of Finance. https://doi.org/10.2139/ssrn.4202874
