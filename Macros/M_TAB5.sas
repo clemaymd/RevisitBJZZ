@@ -20,12 +20,12 @@
 
 	/* ------ To circumvent the "no valid obs" errors in the log, include the following. ------------- */
 	/* ------ Alternatively, put in comments. This choice does *not* affect results. ----------------- */
-	data CompleteCases(keep=dx stock_id y ly&k l&x&k lmret l6mret lto lvol size lbm); set hft2; run;
-	data CompleteCases; set CompleteCases; if nmiss(of _NUMERIC_)=0; run; *output complete cases rows;
-	proc sql noprint; select MIN(dx) into:firstdx from CompleteCases;
-	proc sql noprint; select MAX(dx) into:lastdx from CompleteCases;
+	data cc(keep=dx stock_id y ly&k l&x&k lmret l6mret lto lvol size lbm); set hft2; run;
+	data cc; set cc; if nmiss(of _NUMERIC_)=0; run; *ds with complete cases;
+	proc sql noprint; select MIN(dx) into:firstdx from cc;
+	proc sql noprint; select MAX(dx) into:lastdx from cc; *max min first date, min max last date;
 	data hft2; set hft2; if &firstdx <= dx <= &lastdx ; 
-	proc delete data=CompleteCases; run;
+	proc delete data=cc; run;
 	/* ------------------------------------------------------------------------------------------------ */
 
 	proc reg data = hft2 outest = pe adjrsq noprint; 

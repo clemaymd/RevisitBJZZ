@@ -1,12 +1,12 @@
 %macro M_TAB8(y, dsin);
 
 	/* Create intense Buy and Sell portfolios based on current-week oib */
-	data hft1__(keep=dx stock_id &y lnewret size); 
+	data hft1(keep=dx stock_id &y lnewret size); 
 		set &dsin; 
 		if mod(dx,5)=0; *only non-overlapping weeks;
 	run;
-	proc sort data=hft1__; by dx; run;
-	proc univariate data=hft1__ noprint;
+	proc sort data=hft1; by dx; run;
+	proc univariate data=hft1 noprint;
 		var &y; by dx;
 	    output out=DECILES
 		pctlpts = 5 to 95 by 5
@@ -15,7 +15,7 @@
 	proc sql;
 		create table hft2 as
 		select a.*, b.*
-		from hft1__ a left join DECILES b
+		from hft1 a left join DECILES b
 		on a.dx = b.dx;
 	quit;
 	data hft2_; set hft2;

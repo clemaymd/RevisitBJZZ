@@ -13,11 +13,12 @@
 	run;
 	
 	/* Create subgroups based on the complete case DS to ensure having 1/3 of stocks in each tercile */
-	data CompleteCases(keep=dx stock_id y ly x lmret l6mret lto lvol size lbm lmp); set hft2; run;
-	data CompleteCases; set CompleteCases; if nmiss(of _NUMERIC_)=0; run; *output complete cases rows;
-	proc sort data = CompleteCases; by dx; run;
+	data cc(keep=dx stock_id y ly x lmret l6mret lto lvol size lbm lmp); set hft2; run; 
+	data hft2; set cc; if nmiss(of _NUMERIC_)=0; run; *ds with complete cases;
+	
+	proc sort data = hft2; by dx; run;
 	ods select none;
-	proc univariate data=CompleteCases;
+	proc univariate data=hft2;
 		var &classvar;
 	    by dx;
 	    output out=CLASSVAR_TERCILES pctlpts = 33.33, 66.67 pctlpre = P_;
@@ -26,7 +27,7 @@
 	proc sql;
 		create table hft2_ as
 		select a.*, b.*
-		from CompleteCases a left join CLASSVAR_TERCILES b
+		from hft2 a left join CLASSVAR_TERCILES b
 		on a.dx = b.dx;
 	quit;
 	data hft2__; set hft2_;
@@ -65,8 +66,17 @@
 	quit;
 	ods select all;
 	
-	data nw; set nw;
-	/* only the order of the reported coeff in table 4 matters */
+	/* organize output */
+	/* number of obs used in regression */
+	proc sql;
+		create table n_obs as
+		select classvar_grp, sum(_EDF_) as NOBS
+		from pe1
+		group by classvar_grp;
+	quit;
+	proc sql; create table nwwithobs as select a.*, b.NOBS from nw a left join n_obs b on a.classvar_grp=b.classvar_grp; quit;
+	data nw; set nwwithobs;
+	/* only the order of the reported coeff (x) and nobs matter for this tab */
 	if _NAME_ = 'x' and CLASSVAR_GRP = 'small' then order = 1.1;
 	if _NAME_ = 'x' and CLASSVAR_GRP = 'medium' then order = 1.2;
 	if _NAME_ = 'x' and CLASSVAR_GRP = 'big' then order = 1.3;
@@ -80,7 +90,7 @@
 	if _NAME_ = "lbm" then order = 9;
 	if _NAME_ = "_ADJRSQ_" then order = 10;
 	if _NAME_ = "Intercept" then order = 11;
-	keep _NAME_ CLASSVAR_GRP order Estimate tValue;
+	keep _NAME_ CLASSVAR_GRP order Estimate tValue NOBS;
 	run;
 	proc sort data = nw; by order;
 	run;
