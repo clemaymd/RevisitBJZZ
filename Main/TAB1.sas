@@ -3,28 +3,32 @@
 	David Ardia, Clement Aymard, Tolga Cenesizoglu;
    ********************************************************************************************************** */ 
 
-/* I. Users options: uncomment lines 7-17 to use this file independently  */
-/* 	*1. Replace with your paths; */
-/* libname mydata "/home/hecca/clementaymd/RevisitBJZZ/Data";  */
+/* I. Users options: uncomment lines 7-19 to use this file independently  */
+	*1. Replace with your paths;
+/* libname mydata "/home/hecca/clementaymd/RevisitBJZZ/Data"; * data for the replicator; */
+/* libname mytrdata "/scratch/hecca/clemaymd"; 			   * true data (n/a for the replicator); */
 /* filename mymacros "/home/hecca/clementaymd/RevisitBJZZ/Macros";  */
-/* %let myoutputs = /home/hecca/clementaymd/RevisitBJZZ/Outputs; */
+/* %let myout = /home/hecca/clementaymd/RevisitBJZZ/Outputs;   * output for the replicator; */
+/* %let mytrout = /home/hecca/clementaymd/RevisitBJZZ/Outputs_paper; * output true data (n/a for the replicator); */
 /*  */
 /* 	*2. Define panel; */
-/* %let RTMTD=BJZZ ; *BJZZ or QMP;  */
-/* %let period=1015 ; *1015 for 2010-15 or 1621 for 2016-21; */
+/* %let RTMTD=QMP ; *BJZZ or QMP;  */
+/* %let period=1621 ; *1015 for 2010-15 or 1621 for 2016-21; */
 /*  */
 /* 	*3. Define sample type (only pseudo-sample available for the replicator); */
-/* %let SAMPLETYPE=PSEUDO; *PSEUDO or TRUE; */
+/* %let SAMPLETYPE=TRUE; *PSEUDO or TRUE; */
 
 /* II. Obtain the panel-specific dataset */ 
 %macro PANELDS();
-	%if &RTMTD = BJZZ %then %do; 
-		%if &SAMPLETYPE = PSEUDO %then %do; data DS; set mydata.pseudods_BJZZ; run; %end;
-		%if &SAMPLETYPE = TRUE %then %do; data DS; set mydata.trueds_BJZZ; run; %end;
+	%if &SAMPLETYPE = PSEUDO %then %do; 
+		%if &RTMTD = BJZZ %then %do; data DS; set mydata.pseudods_BJZZ; run; %end;
+		%if &RTMTD = QMP %then %do; data DS; set mydata.pseudods_QMP; run; %end;
+		%global myoutput; %let myoutput=&myout; 
 	%end;
-	%if &RTMTD = QMP %then %do; 
-		%if &SAMPLETYPE = PSEUDO %then %do; data DS; set mydata.pseudods_QMP; run; %end;
-		%if &SAMPLETYPE = TRUE %then %do; data DS; set mydata.trueds_QMP; run; %end;
+	%if &SAMPLETYPE = TRUE %then %do; 
+		%if &RTMTD = BJZZ %then %do; data DS; set mytrdata.trueds_BJZZ; run; %end;
+		%if &RTMTD = QMP %then %do; data DS; set mytrdata.trueds_QMP; run; %end;
+		%global myoutput; %let myoutput=&mytrout; 
 	%end;
 	%if &period = 1015 %then %do; data DS; set DS; if DATE <= '31DEC2015'd; run; %end;
 	%if &period = 1621 %then %do; data DS; set DS; if DATE >  '31DEC2015'd; run; %end;
@@ -39,7 +43,7 @@ PROC MEANS data=DS StackODSOutput n mean std MEDIAN Q1 Q3;
 RUN; 
 
 proc export data=TAB1
-    outfile="&myoutputs./TAB1_&RTMTD.&period..txt"
+    outfile="&myoutput./TAB1_&RTMTD.&period..txt"
     dbms=dlm replace;
     delimiter="";
 run;
@@ -52,12 +56,12 @@ run;
 		data DS_QMP;  set mydata.pseudods_QMP; run; 
 	%end;
 	%if &SAMPLETYPE = TRUE %then %do; 
-		data DS_BJZZ; set mydata.trueds_BJZZ; run; 
-		data DS_QMP;  set mydata.trueds_QMP; run; 
+		data DS_BJZZ; set mytrdata.trueds_BJZZ; run; 
+		data DS_QMP;  set mytrdata.trueds_QMP; run; 
 	%end;
 	%if &period = 1015 %then %do; 
 		data DS_BJZZ; set DS_BJZZ; if DATE <= '31DEC2015'd; run; 
-		data DS_QMP;  set DS_QMP;   if DATE <= '31DEC2015'd; run; 
+		data DS_QMP;  set DS_QMP;  if DATE <= '31DEC2015'd; run; 
 	%end;
 	%if &period = 1621 %then %do; 
 		data DS_BJZZ; set DS_BJZZ; if DATE >  '31DEC2015'd; run;
@@ -86,7 +90,7 @@ data CORR; set CORR0;
 run;
 
 proc export data=CORR
-    outfile="&myoutputs./TAB1_CORR_&period..txt"
+    outfile="&myoutput./TAB1_CORR_&period..txt"
     dbms=dlm replace;
     delimiter="";
 run;
