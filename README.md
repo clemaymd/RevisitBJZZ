@@ -18,7 +18,7 @@ The computer code is written in SAS and allows for replicating all tables presen
 
 The file `ALL.sas` is a wrapper program that allows replicating all tables and figures in the paper.
 The files `TAB1.sas` to `TAB13.sas` are second-layer wrapper programs allowing to obtain all or selected parts of Tables 1 to 13, respectively.
-Specifically, the replicator can obtain a specific panel by defining the macro-variables `RTMD` and `period`. She can also run results based on specific parameters of the regression (e.g., bid-ask returns (`newret`) or CRSP returns (`ret`), `mroibvol` or `mroibtrd`, specific horizon, etc.)
+Specifically, the replicator can obtain a specific panel by defining the macro-variables `RTMD` and `period`. She can also run results based on specific parameters of the regression (e.g., bid-ask returns (`newret`) or CRSP returns (`ret`), `mroibvol` or `mroibtrd`, specific horizon, etc.).
 The file `FIG1.sas` allows to obtain Figure 1.
 
 ## Macros Folder
